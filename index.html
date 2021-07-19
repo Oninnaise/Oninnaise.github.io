@@ -1,0 +1,742 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body onload="show('TAB1')">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<div class="navbar">
+<div class="textcenter">
+<button href=#" onclick="show('TAB1');">General Character Information</button>
+<button href=#" onclick="show('TAB2');">Skill Details</button>
+<button href=#" onclick="show('TAB3');">Background Details</button>
+<button href=#" onclick="show('TAB4');">Havens</button>
+<button href=#" onclick="show('TAB5');">Status</button>
+<button href=#" onclick="show('TAB6');">Powers</button>
+<button id="clipit" href=#" onclick="give();">Copy to Clipboard</button>
+</div>
+</div>
+<div class="container">
+
+<form id="Form" class="form-style-7">
+<div id="TAB1">
+<h2>General Information</h2>
+<div class="regular025"><label class="textcenter">Character Name </label><input style="float:right;" id="name" type="text"></div>
+<div class="regular025"><label class="textcenter">Clan </label><input style="float:right;" id="clan" type="text"></div>
+<div class="regular025"><label class="textcenter">Sect </label><input style="float:right;" id="sect" type="text"></div>
+<div class="regular025"><label class="textcenter">Archetype </label><input style="float:right;" id="archetype" type="text"></div>
+<br>
+<div class="regular025"><label class="textcenter">Cotorie </label><input style="float:right;" id="cotorie" type="text"></div>
+<div class="regular025"><label class="textcenter">Religion </label><input style="float:right;" id="religion" type="text"></div>
+<div class="regular025"><label class="textcenter">Concept </label><input style="float:right;" id="concept" type="text"></div>
+<div class="regular025"><label class="textcenter">Title </label><input style="float:right;" id="title" type="text"></div>
+<br>
+<div class="regular025"><label class="textcenter">Date of Birth </label><input style="float:right;" id="dob" type="text"></div>
+<div class="regular025"><label class="textcenter">Date of Embrace </label><input style="float:right;" id="doe" type="text"></div>
+<div class="regular025"><label class="textcenter">Age </label><input style="float:right;" id="age" type="text"></div>
+<div class="regular025"><label class="textcenter">Birth Tongue </label><input style="float:right;" id="birthtongue" type="text"></div>
+<br>
+<div class="regular025"><label class="textcenter">Health Points </label><input style="float:right;" id="hp" type="text"></div>
+<div class="regular025"><label class="textcenter">Willpower </label><input style="float:right;" id="wp" type="text"></div>
+<div class="regular025"><label class="textcenter">Blood </label><input style="float:right;" id="blood" type="text"></div>
+<div class="regular025"><label class="textcenter">Humanity </label><input style="float:right;" id="humanity" type="text"></div>
+<br>
+<div class="regular025"><label class="textcenter">Humanity Rating </label><input style="float:right;" id="humanityr" type="text"></div>
+<div class="regular025"><label class="textcenter">Derangement Traits </label><input style="float:right;" id="derangementtraits" type="text"></div>
+<div class="regular025"><label class="textcenter">Beast Traits </label><input style="float:right;" id="beasttraits" type="text"></div>
+<h2>Attributes</h2>
+<div class="stubby"><label class="textcenter">Physical<br>Points </label><input style="float:right;width:90%;" id="physical" type="text"></div>
+<div class="stubby"><label class="textcenter">Physical<br>Bonus </label><input style="float:right;width:90%;" id="physicalb" type="text"></div>
+<div class="stubby"><label class="textcenter">Physical<br>Focus </label><input style="float:right;width:90%;" id="physicalf" type="text"></div>
+<div class="stubby"><label class="textcenter">Social<br>Points </label><input style="float:right;width:90%;" id="social" type="text"></div>
+<div class="stubby"><label class="textcenter">Social<br>Bonus </label><input style="float:right;width:90%;" id="socialb" type="text"></div>
+<div class="stubby"><label class="textcenter">Social<br>Focus </label><input style="float:right;width:90%;" id="socialf" type="text"></div>
+<div class="stubby"><label class="textcenter">Mental<br>Points </label><input style="float:right;width:90%;" id="mental" type="text"></div>
+<div class="stubby"><label class="textcenter">Mental<br>Bonus </label><input style="float:right;width:90%;" id="mentalb" type="text"></div>
+<div class="stubby"><label class="textcenter">Mental<br>Focus </label><input style="float:right;width:90%;" id="mentalf" type="text"></div>
+<h2>Skills</h2>
+<div class="regular025"><label>Academics </label><input style="float:right;width:50px;" id="academics" type="text"></div>
+<div class="regular025"><label>Animal Ken </label><input style="float:right;width:50px;" id="animalken" type="text"></div>
+<div class="regular025"><label>Athletics </label><input style="float:right;width:50px;" id="athletics" type="text"></div>
+<div class="regular025"><label>Awareness </label><input style="float:right;width:50px;" id="awareness" type="text"></div>
+<br>
+<div class="regular025"><label>Brawl </label><input style="float:right;width:50px;" id="brawl" type="text"></div>
+<div class="regular025"><label>Computer </label><input style="float:right;width:50px;" id="computer" type="text"></div>
+<div class="regular025"><label>Crafts </label><input style="float:right;width:50px;" id="crafts" type="text"></div>
+<div class="regular025"><label>Dodge </label><input style="float:right;width:50px;" id="dodge" type="text"></div>
+<br>
+<div class="regular025"><label>Drive </label><input style="float:right;width:50px;" id="drive" type="text"></div>
+<div class="regular025"><label>Empathy </label><input style="float:right;width:50px;" id="empathy" type="text"></div>
+<div class="regular025"><label>Firearms </label><input style="float:right;width:50px;" id="firearms" type="text"></div>
+<div class="regular025"><label>Intimidation </label><input style="float:right;width:50px;" id="intimidation" type="text"></div>
+<br>
+<div class="regular025"><label>Investigation </label><input style="float:right;width:50px;" id="investigation" type="text"></div>
+<div class="regular025"><label>Leadership </label><input style="float:right;width:50px;" id="leadership" type="text"></div>
+<div class="regular025"><label>Linguistics </label><input style="float:right;width:50px;" id="linguistics" type="text"></div>
+<div class="regular025"><label>Lore </label><input style="float:right;width:50px;" id="lore" type="text"></div>
+<br>
+<div class="regular025"><label>Medicine </label><input style="float:right;width:50px;" id="medicine" type="text"></div>
+<div class="regular025"><label>Melee </label><input style="float:right;width:50px;" id="melee" type="text"></div>
+<div class="regular025"><label>Occult </label><input style="float:right;width:50px;" id="occult" type="text"></div>
+<div class="regular025"><label>Performance </label><input style="float:right;width:50px;" id="performance" type="text"></div>
+<br>
+<div class="regular025"><label>Science </label><input style="float:right;width:50px;" id="science" type="text"></div>
+<div class="regular025"><label>Security </label><input style="float:right;width:50px;" id="security" type="text"></div>
+<div class="regular025"><label>Stealth </label><input style="float:right;width:50px;" id="stealth" type="text"></div>
+<div class="regular025"><label>Streetwise </label><input style="float:right;width:50px;" id="streetwise" type="text"></div>
+<br>
+<div class="regular025"><label>Subterfuge </label><input style="float:right;width:50px;" id="subterfuge" type="text"></div>
+<div class="regular025"><label>Survival </label><input style="float:right;width:50px;" id="survival" type="text"></div>
+<br>
+<h2>Additional Information</h2>
+<div style="width:190px;display:inline-block;">
+
+<div class="vertical025 textcenterinline">Background</div>
+<div class="rank textcenterinline">Rank</div>
+<br>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg1r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg2r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg3r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="bg4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg4r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg5r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg6" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg6r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="bg7" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg7r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg8" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg8r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="bg9" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="bg9r" type="text"></div>
+</div>
+
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div class="vertical025 textcenterinline">Discipline</div>
+<div class="rank textcenterinline">Rank</div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="dis1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="dis1r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="dis2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="dis2r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="dis3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="dis3r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="dis4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="dis4r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="dis5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="dis5r" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div class="vertical025 textcenterinline">Merit</div>
+<div class="rank textcenterinline">Cost</div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="merit1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit1r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="merit2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit2r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="merit3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit3r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="merit4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit4r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="merit5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit5r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="merit6" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit6r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="merit7" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="merit7r" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div class="vertical025 textcenterinline">Derangement</div>
+<div class="rank textcenterinline">Cost</div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement1r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement2r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement3r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement4r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement5r" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement6" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement6r" type="text"></div>
+
+<div class="vertical025"><input style="width:120px;float:right;" id="derangement7" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;" id="derangement7r" type="text"></div>
+</div>
+</div>
+
+<div id="TAB2">
+<h2>Knowledge</h2>
+<div style="width:190px;display:inline-block;">
+<div class="regular025 textcenterinline" style="height:21px;margin-bottom:6px !important;">Lore</div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore12" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore13" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore14" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore15" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore16" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore17" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore18" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore19" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="lore20" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="regular025 textcenterinline" style="height:21px;margin-bottom:6px !important;">Linguistics</div>
+<div class="regular025"><input style="width:170px;float:right;" id="language1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language12" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language13" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language14" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language15" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="language16" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="regular025 textcenterinline" style="height:21px;margin-bottom:6px !important;">Academics</div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="academics10" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="regular025 textcenterinline" style="height:21px;margin-bottom:6px !important;">Drive</div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="drive10" type="text"></div>
+</div>
+<h2>Specializations</h2>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="small025 textcenterinline" style="margin-bottom:6px;height:21px;">Craft</div>
+<div class="rank textcenterinline" style="height:21px;margin-bottom:6px;">Rank</div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts1s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts1" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts2s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts2" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts3s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts3" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts4s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts4" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts5s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts5" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts6s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts6" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts7s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts7" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts8s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts8" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts9s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts9" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="crafts10s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="crafts10" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="small025 textcenterinline" style="margin-bottom:6px;height:21px;">Science</div>
+<div class="rank textcenterinline" style="height:21px;margin-bottom:6px;">Rank</div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science1s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science1" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science2s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science2" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science3s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science3" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science4s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science4" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science5s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science5" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science6s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science6" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science7s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science7" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science8s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science8" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science9s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science9" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="science10s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="science10" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div class="small025 textcenterinline" style="margin-bottom:6px;height:21px;">Performance</div>
+<div class="rank textcenterinline" style="height:21px;margin-bottom:6px;">Rank</div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance1s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance1" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance2s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance2" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance3s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance3" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance4s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance4" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance5s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance5" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance6s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance6" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance7s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance7" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance8s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance8" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance9s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance9" type="text"></div>
+<div class="vertical025"><input style="width:120px;float:right;" id="performance10s" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="performance10" type="text"></div>
+</div>
+</div>
+<div id="TAB3">
+<h2>Background</h2>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Ally Identity</div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="allies12" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Contact Identity</div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="contacts12" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Elite Influence</div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influencee12" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Underworld Influence</div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="influenceu12" type="text"></div>
+</div>
+<div style="width:178px;display:inline-block;vertical-align:top;">
+
+<div class="regular020" style="margin-bottom:6px;height:21px;">Alternate Identity</div>
+<div class="rank" style="height:21px;margin-bottom:6px;">Rank</div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity1r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity2r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity3r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity4r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity5r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity6" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity6r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity7" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity7r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity8" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity8r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity9" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity9r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity10" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity10r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity11" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity11r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="alternateidentity12" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="alternateidentity12r" type="text"></div>
+</div>
+<div style="width:178px;display:inline-block;vertical-align:top;">
+<div class="regular020" style="margin-bottom:6px;height:21px;">Retainer</div>
+<div class="rank" style="height:21px;margin-bottom:6px;">Rank</div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer1" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer1r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer2" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer2r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer3" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer3r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer4" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer4r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer5" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer5r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer6" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer6r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer7" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer7r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer8" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer8r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer9" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer9r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer10" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer10r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer11" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer11r" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="retainer12" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="retainer12r" type="text"></div>
+</div>
+</div>
+
+
+<div id="TAB4">
+<h2>Havens</h2>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Location</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1" type="text"></div>
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Addons</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven1a12" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Location</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2" type="text"></div>
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Addons</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven2a12" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Location</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3" type="text"></div>
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Addons</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven3a12" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Location</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4" type="text"></div>
+<div style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Addons</div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a1" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a2" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a3" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a4" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a5" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a6" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a7" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a8" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a9" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a10" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a11" type="text"></div>
+<div class="regular025"><input style="width:170px;float:right;" id="haven4a12" type="text"></div>
+</div>
+</div>
+
+<div id="TAB5">
+<h2>Status</h2>
+<div style="width:130px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Abiding Status Source</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus1" type="text"></div>
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Status</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus1-1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus1-2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus1-3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus1-4" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Abiding Status Source</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus2" type="text"></div>
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Status</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus2-1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus2-2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus2-3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus2-4" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;vertical-align:top;">
+
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Abiding Status Source</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus3" type="text"></div>
+<div style="display:inline-block;width:120px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Status</div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus3-1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus3-2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus3-3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="abidingstatus3-4" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Fleeting Status</div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="fleetingstatus7" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Negative Status</div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="negativestatus7" type="text"></div>
+</div>
+</div>
+<div id="TAB6">
+<h2>Powers</h2>
+<div  style="width:190px;display:inline-block;vertical-align:top;">
+<div  class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Thaumaturgy Path</div>
+<div class="regular025"><input style="width:170px;float:right;" id="thaumaturgypath" type="text"></div>
+<div class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Uses Left / Max Uses</div>
+<div class="rank"><input style="width:20px;float:right;"   id="thaumaturgymin" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="thaumaturgymax" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div  class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Necromancy Path</div>
+<div class="regular025"><input style="width:170px;float:right;" id="necromancypath" type="text"></div>
+<div class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Uses Left / Max Uses</div>
+<div class="rank"><input style="width:20px;float:right;"   id="necromancymin" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="necromancymax" type="text"></div>
+</div>
+<div style="width:190px;display:inline-block;vertical-align:top;">
+<div  class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Abyssal Mysticism Path</div>
+<div class="regular025"><input style="width:170px;float:right;" id="abyssalmysticismpath" type="text"></div>
+<div class="textcenter" style="display:inline-block;width:180px;border:1px solid #4D4D4D;padding:5px;margin-bottom:6px;height:21px;">Uses Left / Max Uses</div>
+<div class="rank"><input style="width:20px;float:right;"   id="abyssalmysticismmin" type="text"></div>
+<div class="rank"><input style="width:20px;float:right;"   id="abyssalmysticismmax" type="text"></div>
+</div>
+<br><br>
+<div style="width:130px;display:inline-block;vertical-align:top;">
+<div class="regular020 textcenterinline" style="height:21px;margin-bottom:6px !important;">Techniques</div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="technique12" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="width:253px;height:21px;margin-bottom:6px !important;">Powers</div>
+<div class="regular020"><input style="width:110px;float:right;" id="power1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power12" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power13" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power14" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power15" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power16" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power17" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power18" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power19" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power20" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020"><input style="width:110px;float:right;" id="power21" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power22" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power23" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power24" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power25" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power26" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power27" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power28" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power29" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power30" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power31" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power32" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power33" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power34" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power35" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power36" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power37" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power38" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power39" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="power40" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020 textcenterinline" style="width:253px;height:21px;margin-bottom:6px !important;">Rituals</div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual1" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual2" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual3" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual4" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual5" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual6" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual7" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual8" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual9" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual10" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual11" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual12" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual13" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual14" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual15" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual16" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual17" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual18" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual19" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual20" type="text"></div>
+</div>
+<div style="width:130px;display:inline-block;">
+<div class="regular020"><input style="width:110px;float:right;" id="ritual21" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual22" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual23" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual24" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual25" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual26" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual27" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual28" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual29" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual30" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual31" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual32" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual33" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual34" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual35" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual36" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual37" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual38" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual39" type="text"></div>
+<div class="regular020"><input style="width:110px;float:right;" id="ritual40" type="text"></div>
+</div>
+</form>
+
+<script>
+function show(id){
+document.getElementById('TAB1').style.display = 'none';
+document.getElementById('TAB2').style.display = 'none';
+document.getElementById('TAB3').style.display = 'none';
+document.getElementById('TAB4').style.display = 'none';
+document.getElementById('TAB5').style.display = 'none';
+document.getElementById('TAB6').style.display = 'none';
+document.getElementById(id).style.display = 'block';
+};
+</script>
+
+<script>
+
+function give(){
+var button = document.getElementById("clipit");
+button.textContent = "Converting..."
+var sheet = "<?xml version=\"1.0\" encoding=\"utf-8\"?><sheet>";
+var elements = document.getElementById("Form").elements;
+
+for (var i = 0, element; element = elements[i++];) {
+    sheet = sheet + "<" + element.id + ">" + element.value + "</" + element.id + ">";
+}
+sheet = sheet + "<random>" + Math.floor(Math.random() * 100) + "</random></sheet>";
+console.log(sheet);
+var dummy = document.createElement("textarea");
+document.body.appendChild(dummy);
+dummy.value = sheet;
+dummy.select();
+document.execCommand("copy");
+document.body.removeChild(dummy);
+button.textContent = "Copied!"
+
+}
+
+</script>
