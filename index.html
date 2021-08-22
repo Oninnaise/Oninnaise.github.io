@@ -14,6 +14,9 @@
 <button href=#" onclick="show('TAB5');">Status</button>
 <button href=#" onclick="show('TAB6');">Powers</button>
 <button id="clipit" href=#" onclick="give();">Copy to Clipboard</button>
+<button href=#" onclick="save();">Save to PC</button>
+<button href=#" onclick="document.getElementById('file').click();">Load from PC</button>
+<input hidden id="file" type=file id=fileChooser>
 </div>
 </div>
 <div class="container">
@@ -739,4 +742,71 @@ button.textContent = "Copied!"
 
 }
 
+</script>
+
+<script>
+function save(){
+var sheet = "<?xml version=\"1.0\" encoding=\"utf-8\"?><sheet>";
+var elements = document.getElementById("Form").elements;
+
+for (var i = 0, element; element = elements[i++];) {
+    sheet = sheet + "<" + element.id + ">" + element.value + "</" + element.id + ">";
+}
+sheet = sheet + "<random>" + Math.floor(Math.random() * 100) + "</random></sheet>";
+console.log(sheet);
+var dummy = document.createElement("textarea");
+document.body.appendChild(dummy);
+dummy.value = sheet;
+dummy.select();
+  var hiddenElement = document.createElement('a');
+  hiddenElement.href = 'data:attachment/text,' + encodeURI(sheet);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = document.getElementById("name").value + '.VMP';
+  hiddenElement.click();
+document.body.removeChild(dummy);
+}
+</script>
+<script>
+function readFile(event) {
+
+      //  document.body.textContent = event.target.result; // <-- here
+        console.log(event.target.result);
+        var form=document.getElementById("Form");
+        var parser = new DOMParser();
+        var xmlDoc = parser.parseFromString(event.target.result, 'text/xml');
+        populateData(form,xmlDoc);
+    }
+
+    function changeFile() {
+        var input=document.getElementById("fileChooser");
+      var file = input.files[0];  //<-- here
+      var reader = new FileReader();
+      reader.addEventListener('load', readFile);
+      reader.readAsText(file);
+    }
+
+    function populateData(form, xmlDom){ 
+var tags = xmlDom.getElementsByTagName('*');
+for (var i = 0; i < tags.length; i++) {
+	if (tags[i].nodeName !== 'sheet' && tags[i].nodeName !== null){
+	var temp = document.getElementById(tags[i].nodeName);
+	if ( tags[i].firstChild){
+	temp.value = tags[i].firstChild.nodeValue;	
+	}
+	else{
+	
+	}
+
+	}
+   // alert(tags[i].nodeName + ' = ' + tags[i].firstChild.nodeValue);
+else{
+	//alert("empty");
+}
+
+}
+}
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('[type=file]').onchange = changeFile;
+  
+});
 </script>
