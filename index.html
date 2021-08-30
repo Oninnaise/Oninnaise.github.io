@@ -16,7 +16,7 @@
 <button id="clipit" href=#" onclick="give();">Copy to Clipboard</button>
 <button href=#" onclick="save();">Save to PC</button>
 <button href=#" onclick="document.getElementById('file').click();">Load from PC</button>
-<input hidden id="file" type=file id=fileChooser>
+<input hidden id="file" type=file></input>
 </div>
 </div>
 <div class="container">
@@ -778,7 +778,8 @@ function readFile(event) {
     }
 
     function changeFile() {
-        var input=document.getElementById("fileChooser");
+      var input=document.getElementById("file");
+	  alert(input);
       var file = input.files[0];  //<-- here
       var reader = new FileReader();
       reader.addEventListener('load', readFile);
@@ -805,6 +806,9 @@ else{
 
 }
 }
+
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', function(){
   document.querySelector('[type=file]').onchange = changeFile;
   
